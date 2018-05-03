@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,23 +9,15 @@
 <link rel="stylesheet" href="/resources/css/style.css">
 <script type="text/javascript" src="/resources/js/app.js"></script>
 
-<title>Spring Boot</title>
+<title>BigData - Marcos Chamorro</title>
 </head>
 <body>
-  <h1>Spring Boot - MVC web application example</h1>
-  <hr>
+	<h1>Bienvenidos a la aplicacion de relaciones publicas</h1>
+	<hr>
 
-  <div class="form">
-    <form action="hello" method="post" onsubmit="return validate()">
-      <table>
-        <tr>
-          <td>Enter Your name</td>
-          <td><input id="name" name="name"></td>
-          <td><input type="submit" value="Submit"></td>
-        </tr>
-      </table>
-    </form>
-  </div>
+	<div>
+		<a href="/login">Log In</a>
+	</div>
 
 </body>
 </html>
