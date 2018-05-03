@@ -4,9 +4,15 @@
 	<groupId>com.boraji.tutorial.springboot</groupId>
 	<artifactId>spring-boot-web-application-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<properties>
+	
+<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<scala.binary.version>2.10</scala.binary.version>
 		<java.version>1.8</java.version>
+		<spark.version>1.6.3</spark.version>
 	</properties>
+	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -47,6 +53,54 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming_${scala.binary.version}</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_${scala.binary.version}</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming-twitter_${scala.binary.version}</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.twitter4j</groupId>
+			<artifactId>twitter4j-stream</artifactId>
+			<version>4.0.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>3.6.3</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.6.3</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.6.7.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-scala_2.10</artifactId>
+			<version>2.6.7.1</version>
 		</dependency>
 
 	</dependencies>
