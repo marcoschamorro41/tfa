@@ -11,11 +11,15 @@
 
 <title>BigData - Marcos Chamorro</title>
 </head>
+
+
 <body>
+    <div id= "header">
 	<h1>Bienvenidos a la aplicacion de relaciones publicas</h1>
 	<hr>
+	</div>
 
-	<div>
+	<div id="body">
 		<a href="/login">Log In</a>
 	</div>
 

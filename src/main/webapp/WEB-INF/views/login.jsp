@@ -10,13 +10,18 @@
 </head>
 
 <body>
+<div id="formulario">
 <div class="form">
     <font color="red">${errorMessage}</font>
     <form method="post">
         <a>Name : <input type="text" name="name" /></a><br>
+        <br>
         <a>Password : <input type="password" name="password" /> </a>
+        <hr>
         <input type="submit" />
-    </form></div>
+    </form>
+</div>
+</div>
 </body>
 
 </html>

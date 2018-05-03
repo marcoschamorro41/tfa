@@ -5,3 +5,42 @@
 	border-radius: 7px;
 	padding: 20px;
 }
+
+body{
+	font-family: Arial, Malvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1;
+
+}
+
+h1{
+	margin: 0 auto;
+    padding: 44px 0 50px;
+    text-align: center;
+    width: 960px;	
+}
+
+#formulario a.formulario{
+	font-family: Arial, Malvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+	margin: 0 auto;
+    padding: 44px 0 50px;
+    text-align: center;
+    width: 960px;	
+}
+
+a.formulario{
+    font-family: Arial, Malvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0 auto;
+    padding: 44px 0 50px;
+    text-align: center;
+    width: 960px;   
+}
+
+
