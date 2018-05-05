@@ -9,19 +9,23 @@
 <link rel="stylesheet" href="/resources/css/style.css">
 <script type="text/javascript" src="/resources/js/app.js"></script>
 
-<title>BigData - Marcos Chamorro</title>
+<title>Keywords</title>
 </head>
 
 
 <body>
-	<div id="header">
-		<h1>Bienvenidos a la aplicacion de relaciones publicas</h1>
-		<hr>
+	<h1>Keywords</h1>
+	<div id="formulario">
+		<div class="form">
+			<font color="red">${errorMessage}</font>
+			<form method="post">
+				<a>Keyword: <input type="text" name="keyword" /></a><br> <br>
+				<a>Limit: <input type="text" name="limit" />
+				</a>
+				<hr>
+				<input type="submit" />
+			</form>
+		</div>
 	</div>
-
-	<div id="body">
-		<a href="/login">Log In</a>
-	</div>
-
 </body>
 </html>

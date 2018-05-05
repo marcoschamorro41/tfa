@@ -21,7 +21,7 @@ public class LoginController {
     }
 
     @RequestMapping(value="/login", method = RequestMethod.POST)
-    public String showWelcomePage(ModelMap model, @RequestParam String name, @RequestParam String password){
+    public String showWelcomePage(ModelMap model, @RequestParam String corporate, @RequestParam String name, @RequestParam String password){
 
         boolean isValidUser = service.validateUser(name, password);
         boolean isAdmin = service.isAdmin(name);
@@ -33,6 +33,7 @@ public class LoginController {
 
         model.put("name", name);
         model.put("password", password);
+        model.put("corporate", corporate);
 
         if (isAdmin)
             return "admin";
