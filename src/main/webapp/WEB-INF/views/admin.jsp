@@ -56,7 +56,7 @@ button:hover, a:hover {
 		<p>Empresa ${corporate}</p>
 		<p>Usted puede realizar las siguientes actividades:</p>
 		<p>
-			<button onclick="location.href='/usuarios'">Busqueda</button>
+			<button >Busqueda</button>
 		</p>
 		<p>
 			<button>Reportes</button>
@@ -65,7 +65,7 @@ button:hover, a:hover {
 			<button>Filtros</button>
 		</p>
 		<p>
-			<button>Administración de Usuarios</button>
+			<button onclick="location.href='/usuarios'">Administración de Usuarios</button>
 		</p>
 
 	</div>
