@@ -1,4 +1,4 @@
-package com.tfa;
+package com.tfa.connectors;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
