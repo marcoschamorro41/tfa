@@ -1,60 +1,54 @@
 package com.tfa;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class MySQLConexion {
-	
-	public static void main(String [] args) {
-		getConexion();
-	}
-	
-	public static Connection getConexion () {
-		
-		Connection con = null;
-		
-		try {
-			System.out.println("Empezo bien");
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			String url= "jdbc:mysql://localhost:81/tienda";
-			String usuario = "root";
-			String contrasenia = "";
-			
-			System.out.println("Siguio");
-			con = DriverManager.getConnection(url, usuario, contrasenia);
-			System.out.println("Despues de getCOnneciton");
-			Statement stmt = con.createStatement();
-			String sql = "SELECT * FROM employees";
-			ResultSet rs = stmt.executeQuery(sql);
-			while(rs.next()){
-		         //Retrieve by column name
-		         int id  = rs.getInt("id");
-		         int age = rs.getInt("age");
-		         String first = rs.getString("first");
-		         String last = rs.getString("last");
+import com.mysql.cj.jdbc.MysqlDataSource;
 
-		         //Display values
-		         System.out.print("ID: " + id);
-		         System.out.print(", Age: " + age);
-		         System.out.print(", First: " + first);
-		         System.out.println(", Last: " + last);
-		      }
-		      //STEP 6: Clean-up environment
-		      rs.close();
-		      stmt.close();
-		      con.close();
-		} catch (ClassNotFoundException e) {
-			System.out.println("Error al cargar Driver");
-			e.printStackTrace();
-		} catch (SQLException e) {
-			System.out.println("Error al conectar la BD");
-			e.printStackTrace();
-		}
-				
-		return con;
-	}
+public class MySQLConexion {
+
+    public static void main(String [] args) {
+        try {
+            getConexion();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static Connection getConexion () throws SQLException {
+
+
+        MysqlDataSource dataSource = new MysqlDataSource();
+        dataSource.setUser("sql10237246");
+        dataSource.setPassword("CQuyBrI8HQ");
+        dataSource.setServerName("sql10.freemysqlhosting.net");
+        dataSource.setDatabaseName("sql10237246");
+
+
+        Connection conn = dataSource.getConnection();
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT * FROM usuarios");
+
+        while(rs.next()){
+            //Retrieve by column name
+            String username = rs.getString("username");
+            String password = rs.getString("password");
+            String rol = rs.getString("rol");
+            String company = rs.getString("company");
+
+            //Display values
+            System.out.print("Usuario: " + username);
+            System.out.print("Contra: " + password);
+            System.out.print("Rol: " + rol);
+            System.out.println("Empresa: " + company);
+        }
+        rs.close();
+        stmt.close();
+        conn.close();
+
+        return conn;
+    }
 
 }
