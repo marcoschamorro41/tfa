@@ -7,10 +7,6 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-form {
-	border: 3px solid #f1f1f1;
-}
-
 h2 {
 	text-align: center;
 }
@@ -50,17 +46,25 @@ button:hover {
 }
 
 img.avatar {
-	width: 40%;
+    width: 10%;
 	border-radius: 50%;
 }
 
 .container {
-	padding: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 30%;
+    height: 10%;
 }
 
 span.psw {
 	float: right;
 	padding-top: 16px;
+}
+
+div {
+	resize: none;
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -83,10 +87,10 @@ span.psw {
 
 	<form method="post">
 		<div class="imgcontainer">
-			<img src="img_avatar2.png" alt="Avatar" class="avatar">
+			<img src="/resources/images/eyeroll.png" alt="Avatar" class="avatar">
 		</div>
 
-		<div class="container">
+		<div class="container" align="center">
 			<label for="corporate"><b>Empresa</b></label> <input type="text"
 				placeholder="Ingresar empresa" name="corporate" required> <label
 				for="uname"><b>Usuario</b></label> <input type="text"

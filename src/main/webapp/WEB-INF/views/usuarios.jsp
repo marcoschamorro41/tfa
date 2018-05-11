@@ -79,7 +79,7 @@ tr:nth-child(even) {
 
 <h2>Usted esta en la pagina de Administracion de usuarios</h2>
 <h2> </h2>
-<button class="button createUser">Crear Usuario</button>
+<button onclick="location.href='/usercreation'" class="button createUser">Crear Usuario</button>
 <h2> </h2>
 
 <table>
