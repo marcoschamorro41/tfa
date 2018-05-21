@@ -19,8 +19,13 @@ public class KeywordsController {
     public String showKeywordsPage(ModelMap model){
         return "keywords";
     }
+    
+    @RequestMapping(value="/addkeywords", method = RequestMethod.GET)
+    public String showAddKeywordsPage(ModelMap model){
+        return "agregar-keywords";
+    }
 
-    @RequestMapping(value="/keywords", method = RequestMethod.POST)
+    @RequestMapping(value="/creationofkeywords", method = RequestMethod.POST)
     public String showWelcomePage(ModelMap model, @RequestParam String keyword, @RequestParam String limit){
 
         boolean isValidUser = keywordsService.isLimitValid(limit);
@@ -33,7 +38,7 @@ public class KeywordsController {
         model.put("keyword", keyword);
         model.put("limit", limit);
 
-        return "keywords";
+        return "keyword-agregado";
     }
 
 }

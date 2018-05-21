@@ -67,6 +67,9 @@ button:hover, a:hover {
 		<p>
 			<button onclick="location.href='/usuarios'">Administración de Usuarios</button>
 		</p>
+		<p>
+			<button onclick="location.href='/keywords'">Keywords</button>
+		</p>
 
 	</div>
 

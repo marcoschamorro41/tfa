@@ -10,22 +10,60 @@
 <script type="text/javascript" src="/resources/js/app.js"></script>
 
 <title>Keywords</title>
+<style>
+.card {
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	font-family: arial;
+}
+
+.title {
+	color: #4caf50;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+button {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: white;
+	background-color: #4caf50;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+}
+
+a {
+	text-decoration: none;
+	font-size: 22px;
+	color: black;
+}
+
+button:hover, a:hover {
+	opacity: 0.7;
+}
+</style>
 </head>
 
 
 <body>
-	<h1>Keywords</h1>
-	<div id="formulario">
-		<div class="form">
-			<font color="red">${errorMessage}</font>
-			<form method="post">
-				<a>Keyword: <input type="text" name="keyword" /></a><br> <br>
-				<a>Limit: <input type="text" name="limit" />
-				</a>
-				<hr>
-				<input type="submit" />
-			</form>
-		</div>
+
+	<h2 style="text-align: center">Keywords</h2>
+
+	<div class="card">
+
+		<p>
+			<button onclick="location.href='/addkeywords'">Agregar Keywords</button>
+		</p>
+		<p>
+			<button onclick="location.href='/searchkeywords'">Buscar Keywords</button>
+		</p>
+
 	</div>
+
 </body>
 </html>
