@@ -22,7 +22,7 @@ public class MySQLConexion {
 
         MysqlDataSource dataSource = new MysqlDataSource();
         dataSource.setUser("sql10239400");
-        dataSource.setPassword("CQuyBrI8HQ");
+        dataSource.setPassword("3HG9ZvmM8e");
         dataSource.setServerName("sql10.freemysqlhosting.net");
         dataSource.setDatabaseName("sql10239400");
 
