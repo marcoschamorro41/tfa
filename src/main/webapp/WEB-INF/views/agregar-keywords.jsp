@@ -12,22 +12,18 @@
 		<div class="form">
 			<font color="red">${errorMessage}</font>
 			<form method="post" action="/creationofkeyword">
-				<p>
-				<a>Keyword:
-				<p> </p>
-				<input type="text" name="
-" requiered/></a><br> <br>
-				<p>
-				<a>Limites: 
-				<p> </p>
-				<input type="text" name="limit" requiered/>
-				<p> </p>
-				</a>
-				<hr>
-				<div class="container-crear">
-			<button type="submit">Agregar Keyword</button>
+				            <p>
+                <label for="keyword"><b>Keyword</b></label> <input
+                    type="text" placeholder="Ingresar limite"
+                    name="keyword" required>
+            <p>
+                <label for="limite"><b>Limite</b></label> <input
+                    type="text" placeholder="Ingresar limite" name="limite"
+                    required>
 
-		</div>
+			<p></p>
+            <button type="submit">CARGAR KEYWORDS</button>
+
 			</form>
 		</div>
 	</div>

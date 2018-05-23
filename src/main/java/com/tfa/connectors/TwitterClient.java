@@ -1,5 +1,7 @@
 package com.tfa.connectors;
 
+import java.io.IOException;
+
 import org.apache.spark.SparkConf;
 import org.apache.spark.streaming.Duration;
 import org.apache.spark.streaming.api.java.JavaStreamingContext;
@@ -21,7 +23,7 @@ public class TwitterClient {
     private static final String TWITTER_ACCESS_TOKEN = "164936578-keERLE7jTtXMNQwtm9Fv18mZ1fm8lvUj6oVpFsLe";
     private static final String TWITTER_ACCESS_TOKEN_SECRET = "vqwTdozZqVkK7OEfKzscJ28g93HOLGg3to24qnJw1sqbg";
 
-    public void ingestContent(String keyword, String empresa,  long limit) {
+    public static void ingestContent(String keyword, String empresa,  long limit) {
         ConfigurationBuilder confBuilder = new ConfigurationBuilder()
                 .setDebugEnabled(true).setOAuthConsumerKey(TWITTER_CONSUMER_KEY)
                 .setOAuthConsumerSecret(TWITTER_SECRET_KEY)
@@ -48,18 +50,21 @@ public class TwitterClient {
             javaStreamingContext.awaitTermination();
         } catch (Exception e) {
             e.printStackTrace();
+            javaStreamingContext.close();
+            return;
         }
 
     }
 
-    private static String printTweet(Status statusTweet, String empresa, long limite) {
-        Tweet tweet = GeneradorDeTweet.generarTweet(statusTweet);
+    private static String printTweet(Status statusTweet, String empresa, long limite) throws IOException {
         MongoConnector mongoConn = new MongoConnector();
-        mongoConn.crearDocumento(empresa, tweet);
-        if (limite <= mongoConn.cantidadDeDocumentos(empresa)) {
-            System.out.println("Finalizando ejecución...");
-            throw new RuntimeException();
+        long cant = mongoConn.cantidadDeDocumentos(empresa);
+        if (limite <= cant) {
+            throw new IOException("Finalizando ejecución...");
         }
+        Tweet tweet = GeneradorDeTweet.generarTweet(statusTweet);
+        mongoConn.crearDocumento(empresa, tweet);
+
         return "El tweet se ha guardado";
     }
 

@@ -1,5 +1,7 @@
 package com.tfa.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -21,7 +23,7 @@ public class LoginController {
     }
 
     @RequestMapping(value="/login", method = RequestMethod.POST)
-    public String showWelcomePage(ModelMap model, @RequestParam String corporate, @RequestParam String name, @RequestParam String password){
+    public String showWelcomePage(HttpSession session, ModelMap model, @RequestParam String corporate, @RequestParam String name, @RequestParam String password){
 
         boolean isValidUser = service.validateUser(name, password);
         boolean isAdmin = service.isAdmin(name);
@@ -35,6 +37,7 @@ public class LoginController {
         model.put("password", password);
         model.put("corporate", corporate);
 
+        session.setAttribute("corporate", corporate);
         if (isAdmin)
             return "admin";
         return "welcome";

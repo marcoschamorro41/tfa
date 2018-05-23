@@ -9,9 +9,10 @@
 
 	<div class="card">
 
-		<p class="title">${keyword}</p>
-		<p>Empresa ${limit}</p>
-		<p>Usted puede realizar las siguientes actividades:</p>
+		<p>El Keyword es: ${keyword}</p>
+		<p>El Limite es: ${limite}</p>
+		<p> La empresa es: ${corporate}</p>
+	
 
 
 	</div>
