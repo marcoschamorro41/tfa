@@ -48,5 +48,19 @@ public class KeywordsController {
 
         return "keyword-agregado";
     }
+    
+    @RequestMapping(value="/searchkeywords", method = RequestMethod.GET)
+    public String showSearchKeywordsPage(ModelMap model){
+        return "buscar-keywords";
+    }
+    
+    
 
 }
+
+
+
+
+
+
+

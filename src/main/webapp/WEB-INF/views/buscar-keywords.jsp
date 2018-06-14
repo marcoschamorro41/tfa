@@ -84,22 +84,20 @@ div {
 <body>
 	
 	<div class="container" align="center">
-	<h1>Agregar una Keyword</h1>
+	<h1>Buscar una Keyword</h1>
 		<div class="form">
 		
 			<font color="red">${errorMessage}</font>
 			<form method="post" action="/creationofkeyword">
 				            <p>
-                <label for="keyword"><b>Keyword</b></label> <input
-                    type="text" placeholder="Ingresar limite"
+                <label for="keyword"><b>Ingrese Keyword</b></label> <input
+                    type="text" placeholder="Ingrese Keyword"
                     name="keyword" required>
             <p>
-                <label for="limite"><b>Limite</b></label> <input
-                    type="text" placeholder="Ingresar limite" name="limite"
-                    required>
+               
 
 			<p></p>
-            <button type="submit">CARGAR KEYWORDS</button>
+            <button type="submit">BUSCAR KEYWORD</button>
 
 			</form>
 		</div>
