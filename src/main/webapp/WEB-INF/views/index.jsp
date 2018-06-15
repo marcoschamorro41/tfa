@@ -9,12 +9,10 @@
 
 <title>BigData - Marcos Chamorro</title>
 <style>
-body {
-	font-family: Arial, Helvetica, sans-serif;
+
+h1, h2 {
+	text-align: center;
 }
-
-
-
 
 button {
 	background-color: #4CAF50;
@@ -23,7 +21,7 @@ button {
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
-	width: 100%;
+	width: 40%;
 }
 
 button:hover {
@@ -31,12 +29,87 @@ button:hover {
 }
 
 
+
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 10%;
+	border-radius: 50%;
+}
+
 .container {
     display: block;
-    margin-left: 500px 0;
-    margin-right: 500px 0;
-	width: 50%;
-    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+	width: 30%;
+    height: 10%;
+}
+
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+
+div {
+	resize: none;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 10px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 60%;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+.cancelbtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+}
+
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 20%;
+	border-radius: 70%;
+}
+
+.container {
+    display: block;
+    margin-left: 0px auto;
+    margin-right: 0px auto;
+	width: 30%;
+    height: 10%;
 }
 
 span.psw {
@@ -49,13 +122,13 @@ div {
 }
 
 /* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 300px) {
 	span.psw {
 		display: block;
 		float: none;
 	}
 	.cancelbtn {
-		width: 50%;
+		width: 100%;
 	}
 }
 </style>
@@ -66,11 +139,16 @@ div {
 
 
 <body>
+<div class="imgcontainer">
+			<img src="/resources/images/light.png" alt="Avatar" class="avatar">
+		</div>
 	<div class="container" align="center">
-		<h1>Bienvenidos a la aplicacion de relaciones publicas</h1>
-	
+		<h1>Bienvenidos</h1>
+		<h2>Aplicación de Relaciones Públicas</h2>
+		<p> </p>
+		
 				<p>
-			<button onclick="location.href='/login'">Log in</button>
+			<button onclick="location.href='/login'">LOGUEATE</button>
 		</p>
 	</div>
 
