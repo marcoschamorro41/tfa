@@ -21,10 +21,10 @@ public class MySQLConexion {
 
 
         MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setUser("sql10239400");
-        dataSource.setPassword("3HG9ZvmM8e");
-        dataSource.setServerName("sql10.freemysqlhosting.net");
-        dataSource.setDatabaseName("sql10239400");
+        dataSource.setUser("sql3244014");
+        dataSource.setPassword("XJnp7Jsf2q");
+        dataSource.setServerName("sql3.freemysqlhosting.net");
+        dataSource.setDatabaseName("sql3244014");
 
 
         Connection conn = dataSource.getConnection();
@@ -39,10 +39,10 @@ public class MySQLConexion {
             String company = rs.getString("company");
 
             //Display values
-            System.out.print("Usuario: " + username);
-            System.out.print("Contra: " + password);
-            System.out.print("Rol: " + rol);
-            System.out.println("Empresa: " + company);
+            System.out.print("Usuario: " + username + " ");
+            System.out.print("Contra: " + password + " ");
+            System.out.print("Rol: " + rol + " ");
+            System.out.println("Empresa: " + company + " ");
         }
         rs.close();
         stmt.close();
