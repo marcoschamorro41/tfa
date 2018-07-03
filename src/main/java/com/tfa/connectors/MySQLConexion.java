@@ -21,11 +21,11 @@ public class MySQLConexion {
 
 
         MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setUser("sql10239400");
-        dataSource.setPassword("3HG9ZvmM8e");
-        dataSource.setServerName("sql10.freemysqlhosting.net");
-        dataSource.setDatabaseName("sql10239400");
-
+        dataSource.setUser("mmascheroni");
+        dataSource.setPassword("");
+        dataSource.setServerName("23.229.219.200");
+        dataSource.setPort(3306);
+        dataSource.setDatabaseName("mamascheroni");
 
         Connection conn = dataSource.getConnection();
         Statement stmt = conn.createStatement();
