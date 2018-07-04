@@ -21,6 +21,7 @@ public class SQLClient {
         dataSource.setPassword("CQuyBrI8HQ");
         dataSource.setServerName("sql10.freemysqlhosting.net");
         dataSource.setDatabaseName("sql10237246");
+        
 
         try {
             conn = dataSource.getConnection();
