@@ -91,7 +91,7 @@ div {
 			<form method="post" action="/creationofkeyword">
 				            <p>
                 <label for="keyword"><b>Keyword</b></label> <input
-                    type="text" placeholder="Ingresar limite"
+                    type="text" placeholder="Ingresar keyword"
                     name="keyword" required>
             <p>
                 <label for="limite"><b>Limite</b></label> <input

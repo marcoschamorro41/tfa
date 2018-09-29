@@ -1,5 +1,7 @@
 package com.tfa.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.tfa.connectors.MongoConnector;
+import com.tfa.retriever.Tweet;
 import com.tfa.service.LoginService;
 
 @Controller
@@ -40,6 +44,14 @@ public class LoginController {
         model.put("corporate", corporate);
 
         session.setAttribute("corporate", corporate);
+        
+        MongoConnector c = new MongoConnector();
+        List<Tweet> list = c.obtenerTweetsDeMongo(corporate);
+        
+        for (Tweet tweet : list) {
+			System.out.println("Usuario: " + tweet.getUsuario() + " - Hashtags: " + tweet.getListaHashtags());
+		}
+        
         if (isAdmin)
             return "admin";
         return "welcome";

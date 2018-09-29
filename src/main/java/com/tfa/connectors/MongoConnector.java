@@ -1,15 +1,21 @@
 package com.tfa.connectors;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.bson.BSONException;
 import org.bson.Document;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mongodb.Block;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.tfa.retriever.Tweet;
+import com.tfa.utils.DefaultJsonParser;
 
 public class MongoConnector {
 
@@ -24,7 +30,6 @@ public class MongoConnector {
     public MongoConnector() {
         mongoUri = new MongoClientURI("mongodb://" + username + ":" + password
                 + "@" + host + ":" + port + "/" + databaseName);
-
     }
 
     public void crearDocumento(String empresa, Tweet tweet) {
@@ -53,6 +58,17 @@ public class MongoConnector {
         long count = collection.count();
         mongoClient.close();
         return count;
+    }
+
+    public List<Tweet> obtenerTweetsDeMongo(String empresa) {
+    	MongoClient mongoClient = new MongoClient(mongoUri);
+        MongoDatabase database = mongoClient.getDatabase(databaseName);
+        MongoCollection<Document> collection = database.getCollection(empresa);
+        List<Tweet> list = new ArrayList<Tweet>();
+        FindIterable<Document> iterable = collection.find();
+        iterable.forEach((Block<Document>) d -> 
+        	list.add(DefaultJsonParser.getObjectFromJson(Tweet.class, d.toJson())));
+        return list;
     }
 
 }
