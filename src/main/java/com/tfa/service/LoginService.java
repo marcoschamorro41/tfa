@@ -4,9 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import org.springframework.stereotype.Service;
 
+import com.mysql.cj.jdbc.MysqlDataSource;
 import com.tfa.connectors.SQLClient;
 import com.tfa.entities.Session;
 
@@ -43,15 +45,72 @@ public class LoginService {
         return session;
     }
 
-    public boolean validateUser(String userid, String password) {
-        boolean correctUser = userid.equalsIgnoreCase("admin")
-                || userid.equalsIgnoreCase("chamo");
-        boolean correctPass = password.equalsIgnoreCase("123");
-        return correctUser && correctPass;
-    }
+	public boolean validateUser(String userid, String password) {
+		boolean bandera = false;
+		try {
+			MysqlDataSource dataSource = new MysqlDataSource();
+			dataSource.setUser("mmascheroni");
+			dataSource.setPassword("Marie2704!");
+			dataSource.setServerName("23.229.219.200");
+			dataSource.setPort(3306);
+			dataSource.setDatabaseName("mamascheroni");
+
+			String query = "SELECT * FROM usuarios WHERE username = ?";
+
+			Connection conn = dataSource.getConnection();
+			PreparedStatement statement = conn.prepareStatement(query);
+			statement.setString(1, userid);
+			ResultSet rs = statement.executeQuery();
+
+			
+			
+			while (rs.next()) {
+				String pass = rs.getString("password");
+				bandera = password.equalsIgnoreCase(pass);
+			}
+			rs.close();
+			statement.close();
+			conn.close();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return bandera;
+
+	}
 
     public boolean isAdmin(String userid) {
-        return userid.equalsIgnoreCase("admin");
+    	boolean bandera = false;
+    	
+    	try {
+            MysqlDataSource dataSource = new MysqlDataSource();
+            dataSource.setUser("mmascheroni");
+            dataSource.setPassword("Marie2704!");
+            dataSource.setServerName("23.229.219.200");
+            dataSource.setPort(3306);
+            dataSource.setDatabaseName("mamascheroni");
+
+            String query = "SELECT * FROM usuarios WHERE username = ?";
+            
+            Connection conn = dataSource.getConnection();
+            PreparedStatement statement = conn.prepareStatement(query);
+            statement.setString(1, userid);
+            ResultSet rs = statement.executeQuery();
+
+            while(rs.next()){
+            	String roluser = rs.getString("rol");
+				bandera = roluser.equalsIgnoreCase("admin");
+            }
+        
+            rs.close();
+            statement.close();
+            conn.close();
+            
+        	} catch (SQLException e) {
+        		e.printStackTrace();
+        	}
+    	return bandera;
+        
     }
 
 }

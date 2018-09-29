@@ -25,7 +25,7 @@ public class LoginController {
     @RequestMapping(value="/login", method = RequestMethod.POST)
     public String showWelcomePage(HttpSession session, ModelMap model, @RequestParam String corporate, @RequestParam String name, @RequestParam String password){
 
-    	int resultado = 0;
+ 
     	
     	boolean isValidUser = service.validateUser(name, password);
         boolean isAdmin = service.isAdmin(name);        
