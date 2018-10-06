@@ -83,7 +83,7 @@ div {
 
 	<h2>INICIAR SESION</h2>
 
-	<font color="red">${errorMessage}</font>
+	<div  align="center"><font color="red">${errorMessage}</font></div>
 
 	<form method="post">
 		<div class="imgcontainer">
@@ -100,15 +100,8 @@ div {
 				placeholder="Ingresar contraseña" name="password" required>
 
 			<button type="submit">INGRESAR</button>
-			<label> <input type="checkbox" checked="checked"
-				name="remember"> Recuerdame
-			</label>
 		</div>
 
-		<div class="container" style="background-color: #f1f1f1">
-			<button type="button" class="cancelbtn">Cancelar</button>
-			<span class="psw">¿Olvidaste tu <a href="#">contraseña?</a></span>
-		</div>
 	</form>
 
 </body>

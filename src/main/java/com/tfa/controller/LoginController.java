@@ -27,15 +27,12 @@ public class LoginController {
     }
 
     @RequestMapping(value="/login", method = RequestMethod.POST)
-    public String showWelcomePage(HttpSession session, ModelMap model, @RequestParam String corporate, @RequestParam String name, @RequestParam String password){
-
- 
-    	
-    	boolean isValidUser = service.validateUser(name, password);
+    public String showWelcomePage(HttpSession session, ModelMap model, @RequestParam String corporate, @RequestParam String name, @RequestParam String password) {
+    	boolean isValidUser = service.validateUser(corporate, name, password);
         boolean isAdmin = service.isAdmin(name);        
 
         if (!isValidUser) {
-            model.put("errorMessage", "Invalid Credentials");
+            model.put("errorMessage", "Fallo al loguearse. Compruebe los datos");
             return "login";
         }
 

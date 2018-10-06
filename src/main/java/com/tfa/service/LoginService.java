@@ -4,11 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 import org.springframework.stereotype.Service;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
+import com.tfa.connectors.DataBaseManager;
 import com.tfa.connectors.SQLClient;
 import com.tfa.entities.Session;
 
@@ -45,29 +45,24 @@ public class LoginService {
         return session;
     }
 
-	public boolean validateUser(String userid, String password) {
+	public boolean validateUser(String company, String userid, String password) {
 		boolean bandera = false;
 		try {
-			MysqlDataSource dataSource = new MysqlDataSource();
-			dataSource.setUser("mmascheroni");
-			dataSource.setPassword("Marie2704!");
-			dataSource.setServerName("23.229.219.200");
-			dataSource.setPort(3306);
-			dataSource.setDatabaseName("mamascheroni");
-
+			
+			MysqlDataSource dataSource = DataBaseManager.getMysqlDataSource();
 			String query = "SELECT * FROM usuarios WHERE username = ?";
-
 			Connection conn = dataSource.getConnection();
 			PreparedStatement statement = conn.prepareStatement(query);
 			statement.setString(1, userid);
 			ResultSet rs = statement.executeQuery();
-
-			
 			
 			while (rs.next()) {
+				String corp = rs.getString("company");
 				String pass = rs.getString("password");
-				bandera = password.equalsIgnoreCase(pass);
+				bandera = password.equalsIgnoreCase(pass) &&
+						company.equalsIgnoreCase(corp);
 			}
+			
 			rs.close();
 			statement.close();
 			conn.close();
