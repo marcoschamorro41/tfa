@@ -108,7 +108,7 @@
 
           function drawRegionsMap() {
             var data = google.visualization.arrayToDataTable([
-              ['Country', 'Popularity'],
+              ['Pais', 'Cantidad de Tweets'],
               ['Argentina', 200],
               ['Brazil', 400],
               ['Russia', 250],
@@ -188,10 +188,15 @@ th, td {
     padding: 15px;
 }
 
+  table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+  
 </style>
 </head>
 <body>
-<table class="columns">
+<table class="center">
       <tr>
         <td>
         <div><p><strong>Cantidad de Menciones</strong></p></div>
