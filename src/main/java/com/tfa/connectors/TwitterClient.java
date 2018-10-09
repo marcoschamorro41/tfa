@@ -7,6 +7,7 @@ import org.apache.spark.streaming.Duration;
 import org.apache.spark.streaming.api.java.JavaStreamingContext;
 import org.apache.spark.streaming.twitter.TwitterUtils;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tfa.retriever.GeneradorDeTweet;
 import com.tfa.retriever.Tweet;
 
@@ -57,7 +58,16 @@ public class TwitterClient {
     }
 
     private static String printTweet(Status statusTweet, String empresa, long limite) throws IOException {
-        MongoConnector mongoConn = new MongoConnector();
+    	System.out.println("Imprimiendo Pichos");
+    	System.out.println("Imprimiendo Pichos");
+    	System.out.println("Imprimiendo Pichos");
+    	System.out.println("Imprimiendo Pichos");
+    	System.out.println("Imprimiendo Pichos");
+    	ObjectMapper mapper = new ObjectMapper();
+    	String picho = mapper.writeValueAsString(statusTweet);
+    	System.out.println(picho);
+    	
+    	MongoConnector mongoConn = new MongoConnector();
         long cant = mongoConn.cantidadDeDocumentos(empresa);
         if (limite <= cant) {
             throw new IOException("Finalizando ejecución...");

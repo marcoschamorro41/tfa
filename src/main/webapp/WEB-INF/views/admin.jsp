@@ -59,7 +59,7 @@ button:hover, a:hover {
 			<button >Busqueda</button>
 		</p>
 		<p>
-			<button>Reportes</button>
+			<button onclick="location.href='reportes'">Reportes</button>
 		</p>
 		<p>
 			<button>Filtros</button>

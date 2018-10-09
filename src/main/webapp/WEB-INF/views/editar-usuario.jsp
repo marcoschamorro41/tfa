@@ -1,7 +1,7 @@
 <html>
 
 <head>
-<title>Crear Usuario</title>
+<title>Editar Usuario</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <!-- Static content -->
@@ -105,31 +105,32 @@ span.psw {
 
 <body>
 	<h2></h2>
-	<h2>CREAR USUARIO</h2>
+	<h2>EDITAR USUARIO</h2>
 
 	<div  align="center"><font color="red">${errorMessage}</font></div>
 
-	<form method="post" action="/creationofuser">
-
+	<form method="post" action="/editionofuser">
+		<input type="hidden" name="oldUsername" value="${viejoUsuario}" />
 		<div class="container">
 			<p>
 				<label for="user-name"><b>Nombre de Usuario</b></label> <input
 					type="text" placeholder="Ingresar nombre de usuario"
-					name="username" required>
+					name="username" value="${usuario}" required>
 			<p>
 				<label for="password"><b>Contraseña</b></label> <input
 					type="password" placeholder="Ingresar contraseña" name="password"
-					required>
+					value="${password}" required>
 			<p>
 				<label for="corporate"><b>Empresa</b></label> <input type="text"
-					placeholder="Ingresar empresa" name="corporate" required>
+					placeholder="Ingresar empresa" name="corporate" value="${empresa}" required>
 			<p>
-				<label for="usertype"><b>Tipo de Usuario</b></label> <input
-					type="text" placeholder="Ingresar empresa" name="usertype" required>
+				<label for="usertype"><b>Rol</b></label> <input
+					type="text" placeholder="Ingresar Rol" name="usertype" 
+					value="${rol}" required>
 			<p></p>
 		</div>
 		<div class="container-crear">
-			<button type="submit">CREAR USUARIO</button>
+			<button type="submit">EDITAR USUARIO</button>
 
 		</div>
 

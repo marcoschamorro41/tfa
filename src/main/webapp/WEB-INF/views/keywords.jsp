@@ -46,6 +46,7 @@ a {
 button:hover, a:hover {
 	opacity: 0.7;
 }
+
 </style>
 </head>
 
@@ -57,10 +58,10 @@ button:hover, a:hover {
 	<div class="card">
 
 		<p>
-			<button onclick="location.href='/addkeywords'">Agregar Keywords</button>
+			<button onclick="location.href='/addkeywords'">Agregar Keyword</button>
 		</p>
 		<p>
-			<button onclick="location.href='/searchkeywords'">Buscar Keywords</button>
+			<button onclick="location.href='/searchkeywords'">Buscar Keyword</button>
 		</p>
 
 	</div>

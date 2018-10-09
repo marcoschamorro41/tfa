@@ -48,7 +48,7 @@ public class LoginController {
         for (Tweet tweet : list) {
 			System.out.println("Usuario: " + tweet.getUsuario() + " - Hashtags: " + tweet.getListaHashtags());
 		}
-        
+
         if (isAdmin)
             return "admin";
         return "welcome";

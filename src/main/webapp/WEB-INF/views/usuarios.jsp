@@ -1,3 +1,12 @@
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="com.mysql.cj.jdbc.MysqlDataSource"%>
+<%@page import="com.tfa.connectors.DataBaseManager"%>
+<%@page import="com.tfa.connectors.SQLClient"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,48 +86,72 @@ tr:nth-child(even) {
 </head>
 <body>
 
-<h2>Usted esta en la pagina de Administracion de usuarios</h2>
+<h2>Administracion de usuarios</h2>
 <h2> </h2>
 <button onclick="location.href='/usercreation'" class="button createUser">Crear Usuario</button>
 <h2> </h2>
-
+<br/><br/>
 <table>
 
-<tr>
-    <th>ID</th>
-    <th>Nombre</th>
-    <th>Correo</th>
-    <th>Tipo de usuario</th>
+  <tr>
+    <th>Usuario</th>
+    <th>Empresa</th>
+    <th>Rol</th>
     <th>Accion</th>
   </tr>
 
-<tr>
-    <td>01</td>
-    <td>Marcos Chamorro</td>
-    <td>marcos.chamorro@gmail.com</td>
-    <td>Administrador</td>
-    <td>
-    <button class="btn edit">Editar</button>
-<button class="btn delete">Borrar</button>
-    </td>
-    
-</tr>
+
+<%
+try {
+	
+	MysqlDataSource dataSource = DataBaseManager.getMysqlDataSource();
+	String query = "SELECT * FROM usuarios";
+	Connection conn = dataSource.getConnection();
+	PreparedStatement statement = conn.prepareStatement(query);
+	ResultSet rs = statement.executeQuery();
+	
+	while (rs.next()) {
+		
+		%>
+		
+		<tr>
+			<td><%=rs.getString("username") %></td>
+			<td><%=rs.getString("company") %></td>
+			<td><%=rs.getString("rol") %></td>
+			<th>
+			
+				<form action="/edituser" method="get">
+                	<input type="hidden" name="username" value="<%=rs.getString("username") %>" />
+                	<button class="btn edit">Editar</button>
+            	</form>
+
+				<form action="/deleteuser" method="get">
+                	<input type="hidden" name="username" value="<%=rs.getString("username") %>" />
+                	<button class="btn delete">Borrar</button>
+            	</form>
+			
+			
+			</th>
+		</tr>
+		
+		<%
+	}
+	
+	rs.close();
+	statement.close();
+	conn.close();
+
+} catch (SQLException e) {
+	e.printStackTrace();
+}
+%>
+
 
 
 </table>
 
 <h2></h2>
 
-<div class="pagination">
-  <a href="#">&laquo;</a>
-  <a class="active" href="#">1</a>
-  <a href="#">2</a>
-  <a href="#">3</a>
-  <a href="#">4</a>
-  <a href="#">5</a>
-  <a href="#">6</a>
-  <a href="#">&raquo;</a>
-</div>
 
 </body>
 </html>
