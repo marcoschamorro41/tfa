@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.bson.BSONException;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -68,6 +69,19 @@ public class MongoConnector {
         FindIterable<Document> iterable = collection.find();
         iterable.forEach((Block<Document>) d -> 
         	list.add(DefaultJsonParser.getObjectFromJson(Tweet.class, d.toJson())));
+        mongoClient.close();
+        return list;
+    }
+    
+    public List<Tweet> obtenerTweetsDeMongo(String empresa, Bson query) {
+    	MongoClient mongoClient = new MongoClient(mongoUri);
+        MongoDatabase database = mongoClient.getDatabase(databaseName);
+        MongoCollection<Document> collection = database.getCollection(empresa);
+        List<Tweet> list = new ArrayList<Tweet>();
+        FindIterable<Document> iterable = collection.find(query);
+        iterable.forEach((Block<Document>) d -> 
+        	list.add(DefaultJsonParser.getObjectFromJson(Tweet.class, d.toJson())));
+        mongoClient.close();
         return list;
     }
 

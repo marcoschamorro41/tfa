@@ -58,10 +58,7 @@ button:hover, a:hover {
 	<div class="card">
 
 		<p>
-			<button onclick="location.href='/addkeywords'">Agregar Keyword</button>
-		</p>
-		<p>
-			<button onclick="location.href='/searchkeywords'">Buscar Keyword</button>
+			<button onclick="location.href='/addkeywords'">Agregar nueva Keyword</button>
 		</p>
 
 	</div>

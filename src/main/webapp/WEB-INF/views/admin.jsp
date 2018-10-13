@@ -56,13 +56,10 @@ button:hover, a:hover {
 		<p>Empresa ${corporate}</p>
 		<p>Usted puede realizar las siguientes actividades:</p>
 		<p>
-			<button >Busqueda</button>
+			<button onclick="location.href='busqueda'">Busqueda</button>
 		</p>
 		<p>
 			<button onclick="location.href='reportes'">Reportes</button>
-		</p>
-		<p>
-			<button>Filtros</button>
 		</p>
 		<p>
 			<button onclick="location.href='/usuarios'">Administración de Usuarios</button>
