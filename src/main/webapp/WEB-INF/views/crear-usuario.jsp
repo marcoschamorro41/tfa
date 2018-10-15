@@ -7,32 +7,22 @@
 <!-- Static content -->
 <link rel="stylesheet" href="/resources/css/style.css">
 <script type="text/javascript" src="/resources/js/app.js"></script>
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
 <style>
-font-family
 
-
-:
-
- 
-
-Arial
-,
-Helvetica
-,
-sans-serif
-
-
-;
-}
-form {
-	border: 3px solid #f1f1f1;
-}
-
-h2 {
-	text-align: center;
+#main-container{
+	font-family: 'Roboto Condensed', sans-serif;
+	padding-top: 2%;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-bottom: 2%;
+	background-color: #FFF;
+	opacity: .8;
+	margin-top: 50px;    
+    margin-left: auto;
+    margin-right: auto;
+	width: 40%;
 }
 
 input[type=text], input[type=password] {
@@ -45,6 +35,7 @@ input[type=text], input[type=password] {
 }
 
 button {
+	font-family: 'Roboto Condensed', sans-serif;
 	border: none;
 	outline: 0;
 	display: inline-block;
@@ -62,26 +53,15 @@ button:hover {
 }
 
 .cancelbtn {
-	width: auto;
-	padding: 10px 18px;
 	background-color: #f44336;
 }
 
-.imgcontainer {
-	text-align: center;
-	margin: 24px 0 12px 0;
-}
-
-img.avatar {
-	width: 40%;
-	border-radius: 50%;
-}
 
 .container-crear {
+	font-family: 'Roboto Condensed', sans-serif;
 	max-width: 300px;
 	margin: auto;
 	text-align: center;
-	font-family: arial;
 	padding: 16px;
 }
 
@@ -96,15 +76,12 @@ span.psw {
 		display: block;
 		float: none;
 	}
-	.cancelbtn {
-		width: 100%;
-	}
 }
 </style>
 </head>
 
-<body>
-	<h2></h2>
+<body background="/resources/images/background_1.jpg">
+	<div id= "main-container">
 	<h2>CREAR USUARIO</h2>
 
 	<div  align="center"><font color="red">${errorMessage}</font></div>
@@ -112,6 +89,7 @@ span.psw {
 	<form method="post" action="/creationofuser">
 
 		<div class="container">
+			<br>
 			<p>
 				<label for="user-name"><b>Nombre de Usuario</b></label> <input
 					type="text" placeholder="Ingresar nombre de usuario"
@@ -133,10 +111,11 @@ span.psw {
 
 		</div>
 
-		<div class="container-crear" style="background-color: #f1f1f1">
-			<button type="button" class="cancelbtn">Cancelar</button>
+		<div class="container-crear">
+			<button type="button" class="cancelbtn">CANCELAR</button>
 		</div>
 	</form>
+	</div>
 
 
 </body>

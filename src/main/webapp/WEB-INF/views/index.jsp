@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
 <!-- Static content -->
 
@@ -10,25 +11,35 @@
 <title>BigData - Marcos Chamorro</title>
 <style>
 
-h1, h2 {
+h1{
 	text-align: center;
+	color: white;
 }
 
 button {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 20px;
 	background-color: #4CAF50;
+	opacity: 0.8;
 	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
+	padding: 10px 10px;
 	border: none;
 	cursor: pointer;
-	width: 40%;
+	width: 50%;
+	opacity: none;
 }
+
+button.boton-loguear{
+	background-color: #4CAF50;
+	opacity: none;
+}
+
 
 button:hover {
+	color: #FFF;
+	background-color: #4CAF50;
 	opacity: 0.8;
 }
-
-
 
 .imgcontainer {
 	text-align: center;
@@ -41,11 +52,17 @@ img.avatar {
 }
 
 .container {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #000;
+	opacity: .8;
+	margin-top: 10%;
+	color: white;
     display: block;
     margin-left: auto;
     margin-right: auto;
-	width: 30%;
-    height: 10%;
+    margin-bottom: 10%;
+	width: 50%;
 }
 
 span.psw {
@@ -58,43 +75,17 @@ div {
 }
 
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	margin-top: 40px;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 20px;
 }
 
-h1, h2 {
-	text-align: center;
-}
 
-input[type=text], input[type=password] {
-	width: 100%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-}
-
-button {
-	background-color: #4CAF50;
-	color: white;
-	padding: 10px 10px;
-	margin: 8px 0;
-	border: none;
-	cursor: pointer;
-	width: 60%;
-}
-
-button:hover {
-	opacity: 0.8;
-}
-
-.cancelbtn {
-	width: auto;
-	padding: 10px 18px;
-	background-color: #f44336;
-}
 
 .imgcontainer {
+	margin-top: 25px;
 	text-align: center;
 	margin: 24px 0 12px 0;
 }
@@ -104,13 +95,6 @@ img.avatar {
 	border-radius: 70%;
 }
 
-.container {
-    display: block;
-    margin-left: 0px auto;
-    margin-right: 0px auto;
-	width: 30%;
-    height: 10%;
-}
 
 span.psw {
 	float: right;
@@ -118,6 +102,7 @@ span.psw {
 }
 
 div {
+	margin-top: 25px;
 	resize: none;
 }
 
@@ -132,23 +117,23 @@ div {
 	}
 }
 </style>
-
 </head>
 
-
-
-
 <body>
+<body background="/resources/images/background-index.jpg">
+<div class="container" align="center">
 <div class="imgcontainer">
-			<img src="/resources/images/light.png" alt="Avatar" class="avatar">
+		<img src="/resources/images/light.png" alt="Avatar" class="avatar">
 		</div>
-	<div class="container" align="center">
-		<h1>Bienvenidos</h1>
-		<h2>Aplicación de Relaciones Públicas</h2>
+
+		<h1>B I E N V E N I D O S</h1>
+		<br>
+		<LABEL>Aplicación de Relaciones Públicas</LABEL>
 		<p> </p>
 		
 				<p>
-			<button onclick="location.href='/login'">LOGUEATE</button>
+				<br>
+			<button onclick="location.href='/login'" class="boton-loguear">LOGUEATE</button>
 		</p>
 	</div>
 

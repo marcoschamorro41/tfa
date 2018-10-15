@@ -17,11 +17,26 @@
 <!-- Static content -->
 <link rel="stylesheet" href="/resources/css/style.css">
 <script type="text/javascript" src="/resources/js/app.js"></script>
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <style>
 
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+#main-container{
+	font-family: 'Roboto Condensed', sans-serif;
+	margin: 50px;
+	padding-top: 2%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 2%;
+	background-color: #FFF;
+	opacity: .8;
+}
+
 .button {
+	font-family: 'Roboto Condensed', sans-serif;
     background-color: #d10303;
     border: none;
     color: white;
@@ -47,7 +62,7 @@
 .delete {color: red;}
 
 table {
-    font-family: arial, sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
@@ -84,9 +99,10 @@ tr:nth-child(even) {
 
 </style>
 </head>
-<body>
+<body background="/resources/images/background_1.jpg">
+<div id= "main-container">
 
-<h2>Administracion de usuarios</h2>
+<h2>ADMINISTRACIÓN DE USUARIOS</h2>
 <h2> </h2>
 <button onclick="location.href='/usercreation'" class="button createUser">Crear Usuario</button>
 <h2> </h2>
@@ -151,6 +167,7 @@ try {
 </table>
 
 <h2></h2>
+</div>
 
 
 </body>

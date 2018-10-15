@@ -4,71 +4,84 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <!-- Static content -->
-<link rel="stylesheet" href="/resources/css/style.css">
 <script type="text/javascript" src="/resources/js/app.js"></script>
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <style>
-.card {
-	max-width: 300px;
-	margin: auto;
-	text-align: center;
-	font-family: arial;
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
-.title {
-	color: #4caf50;
-	font-size: 18px;
-	font-weight: bold;
+h2 {
+	text-align: center;
 }
 
 button {
-	border: none;
-	outline: 0;
-	display: inline-block;
-	padding: 8px;
+	background-color: #4CAF50;
 	color: white;
-	background-color: #4caf50;
-	text-align: center;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
 	cursor: pointer;
-	width: 100%;
-	font-size: 18px;
+	width: 70%;
+	margin-top: 5px;
+	margin-left: auto;
+    margin-right: auto;
+	}
+
+.card {
+	background-color: white;
+	opacity: .8;
+	color: #000;
+    display: block;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10px;
+    margin-top: 50px;    
+    margin-left: auto;
+    margin-right: auto;
+	width: 30%;
+    height: 30%;    
 }
 
-a {
-	text-decoration: none;
-	font-size: 22px;
-	color: black;
+
+
+
+button:hover {
+	opacity: 0.8;
 }
 
-button:hover, a:hover {
-	opacity: 0.7;
-}
+
+
 </style>
 </head>
-<body>
-
-	<h2 style="text-align: center">Bienvenido</h2>
-
-	<div class="card">
-
+	<body background="/resources/images/background_1.jpg">
+		<div class="card">
+		<h2>BIENVENIDO</h2>
+		<div align="center">
 		<p class="title">${name}</p>
 		<p>Empresa ${corporate}</p>
-		<p>Usted puede realizar las siguientes actividades:</p>
+		<p>Usted puede realizar las siguientes actividades</p>
+		</div>
+		
+		<div align="center">
 		<p>
-			<button onclick="location.href='busqueda'">Busqueda</button>
+			<button onclick="location.href='busqueda'">BÚSQUEDA</button>
 		</p>
+		
 		<p>
-			<button onclick="location.href='reportes'">Reportes</button>
+			<button onclick="location.href='reportes'">REPORTES</button>
 		</p>
+		
 		<p>
-			<button onclick="location.href='/usuarios'">Administración de Usuarios</button>
+			<button onclick="location.href='/usuarios'">ADMINISTRACIÓN DE USUARIOS</button>
 		</p>
+		
 		<p>
-			<button onclick="location.href='/keywords'">Keywords</button>
+			<button onclick="location.href='/keywords'">KEYWORDS</button>
 		</p>
+		</div>
+		</div>
 
-	</div>
-
-</body>
+	</body>
 </html>

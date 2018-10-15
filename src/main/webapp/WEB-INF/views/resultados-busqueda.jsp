@@ -9,21 +9,33 @@
 <!-- Static content -->
 <link rel="stylesheet" href="/resources/css/style.css">
 <script type="text/javascript" src="/resources/js/app.js"></script>
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <style>
 
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+#main-container{
+	margin: 50px;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 2%;
+	background-color: #FFF;
+	opacity: .8;
+}
 
 button {
+	font-family: 'Roboto Condensed', sans-serif;
 	border: none;
 	outline: 0;
 	display: inline-block;
-	padding: 8px;
+	padding: 5px;
 	color: white;
 	background-color: #4caf50;
 	text-align: center;
 	cursor: pointer;
-	width: 100%;
+	width: 90%;
 	font-size: 18px;
 }
 
@@ -52,7 +64,7 @@ button {
 .delete {color: red;}
 
 table {
-    font-family: arial, sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
@@ -61,6 +73,8 @@ th{
 	text-align: center;
 	padding: 8px;
 	border: 1px solid #dddddd;
+	color: white;
+	background-color: #4caf50;
 }
 
 td {
@@ -89,9 +103,10 @@ tr:nth-child(even) {
 
 </style>
 </head>
-<body>
+<body background="/resources/images/background_1.jpg">
+<div id="main-container">
 <br/>
-<h2>Resultados de su búsqueda</h2>
+<h2>RESULTADOS DE LA BÚSQUEDA</h2>
 <br/>
 <table>
 
@@ -164,11 +179,11 @@ tr:nth-child(even) {
 </table><br/><br/>
 <div class="container-crear">
 		
-			<button onclick="location.href='/admin'">Regresar al menu principal</button>
+			<button onclick="location.href='/admin'">REGRESAR AL MENÚ</button>
 		
 		
 		</div>
-
+</div>
 
 
 </body>
