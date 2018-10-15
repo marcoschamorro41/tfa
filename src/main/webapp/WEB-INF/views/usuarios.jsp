@@ -61,6 +61,26 @@ body {
 .edit {color: green;}
 .delete {color: red;}
 
+.volver-section{
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+.volver{
+	align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
 table {
     font-family: 'Roboto Condensed', sans-serif;
     border-collapse: collapse;
@@ -99,13 +119,15 @@ tr:nth-child(even) {
 
 </style>
 </head>
+
+
 <body background="/resources/images/background_1.jpg">
 <div id= "main-container">
 
 <h2>ADMINISTRACIÓN DE USUARIOS</h2>
 <h2> </h2>
 <button onclick="location.href='/usercreation'" class="button createUser">Crear Usuario</button>
-<h2> </h2>
+
 <br/><br/>
 <table>
 
@@ -115,6 +137,8 @@ tr:nth-child(even) {
     <th>Rol</th>
     <th>Accion</th>
   </tr>
+  
+  
 
 
 <%
@@ -163,10 +187,15 @@ try {
 %>
 
 
-
 </table>
+<br/><br/>
 
-<h2></h2>
+<div class= "volver-section">
+<button onclick="location.href='/admin'" class="volver"> REGRESAR AL MENÚ </button>
+			<br>
+</div>
+
+
 </div>
 
 

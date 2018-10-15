@@ -52,7 +52,7 @@ button:hover {
 }
 
 img.avatar {
-    width: 10%;
+    width: 30%;
 	border-radius: 50%;
 	color: white;
 }

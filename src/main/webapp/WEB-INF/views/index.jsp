@@ -17,21 +17,22 @@ h1{
 }
 
 button {
+
+	display: inline-block;
+	line-height: 120%;
 	font-family: 'Roboto Condensed', sans-serif;
-	font-size: 20px;
-	background-color: #4CAF50;
-	opacity: 0.8;
-	color: white;
-	padding: 10px 10px;
 	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: #4CAF50;
+	background-color: transparent;
+	border: 1px solid #4CAF50;
+	transition: background-color ease 400ms;
+	text-align: center;
 	cursor: pointer;
 	width: 50%;
-	opacity: none;
-}
-
-button.boton-loguear{
-	background-color: #4CAF50;
-	opacity: none;
+	font-size: 18px;
 }
 
 
@@ -40,6 +41,7 @@ button:hover {
 	background-color: #4CAF50;
 	opacity: 0.8;
 }
+
 
 .imgcontainer {
 	text-align: center;
@@ -56,7 +58,7 @@ img.avatar {
 	padding-bottom: 10px;
 	background-color: #000;
 	opacity: .8;
-	margin-top: 10%;
+	margin-top: 5%;
 	color: white;
     display: block;
     margin-left: auto;
@@ -73,6 +75,7 @@ span.psw {
 div {
 	resize: none;
 }
+
 
 body {
 	background-size: 100% 100%;
@@ -133,7 +136,9 @@ div {
 		
 				<p>
 				<br>
+				<div class="ingresar"> 
 			<button onclick="location.href='/login'" class="boton-loguear">LOGUEATE</button>
+			</div>
 		</p>
 	</div>
 

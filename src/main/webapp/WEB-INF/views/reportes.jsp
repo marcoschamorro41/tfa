@@ -6,8 +6,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
   
   
   <!-- ACA VAN LOS GRAFICOS -->
@@ -161,16 +163,26 @@
   
   
   <!-- ACA VAN LOS GRAFICOS -->
-  
-  
+
   
   <style>
   .card {
-	max-width: 300px;
-	margin: auto;
-	text-align: center;
-	font-family: arial;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 16px;7
+	padding: 12px 20px;
+	background-color: white;
+	opacity: .8;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
+
+.boton-volver{
+	text-align: center;
+	padding: 12px 20px;
+}
+
+
 button {
 	border: none;
 	outline: 0;
@@ -180,7 +192,7 @@ button {
 	background-color: #4caf50;
 	text-align: center;
 	cursor: pointer;
-	width: 100%;
+	width: 50%;
 	font-size: 18px;
 }
 
@@ -196,6 +208,7 @@ th, td {
 </style>
 </head>
 <body>
+<div class="card">
 <table class="center">
       <tr>
         <td>
@@ -220,10 +233,12 @@ th, td {
       </tr>
     </table>
     <br/>
-<div class="card">
+
     <p>
+    <div class= "boton-volver">
 			<button onclick="location.href='/admin'">Regresar al menu principal</button>
-		</p>
+		
+		</div>
 		
 		</div>
 </body>
