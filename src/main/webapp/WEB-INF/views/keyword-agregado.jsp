@@ -8,13 +8,35 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-  .card {
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  
+<style>
+  
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container{
+	font-family: 'Roboto Condensed', sans-serif;
+	padding-top: 2%;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-bottom: 2%;
+	background-color: #FFF;
+	opacity: .8;
+	margin-top: 50px;    
+    margin-left: auto;
+    margin-right: auto;
+	width: 40%;
+
+}
+ 
+.card {
 	max-width: 300px;
 	margin: auto;
 	text-align: center;
-	font-family: arial;
 }
+
 button {
 	border: none;
 	outline: 0;
@@ -30,8 +52,9 @@ button {
 
 </style>
 </head>
-<body>
 
+
+<body background="/resources/images/background_1.jpg">
 <div class="container">
   <h2>En hora buena!</h2>
   <div class="alert alert-success">
@@ -42,7 +65,7 @@ button {
 		<p>La empresa es: ${corporate}</p>
   </div>
 
-</div>
+
 <div class="card">
     <p>
 			<button onclick="location.href='/keywords'">Regresar a Keywords</button>
@@ -51,6 +74,7 @@ button {
 			<button onclick="location.href='/admin'">Regresar al menu principal</button>
 		</p>
 		
-		</div>
+</div>
+</div>
 </body>
 </html>

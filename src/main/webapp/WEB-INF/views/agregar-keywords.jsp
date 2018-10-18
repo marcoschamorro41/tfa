@@ -3,14 +3,36 @@
 <head>
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <style>
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 h1, h2{
 	text-align: center;
 }
+
+.container{
+	font-family: 'Roboto Condensed', sans-serif;
+	padding-top: 2%;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-bottom: 2%;
+	background-color: #FFF;
+	opacity: .8;
+	margin-top: 50px;    
+    margin-left: auto;
+    margin-right: auto;
+	width: 40%;
+}
+
+.form {
+	padding: 2%;
+	
+}
+
+
 
 input[type=text], input[type=password] {
 	width: 100%;
@@ -51,14 +73,6 @@ img.avatar {
 	border-radius: 50%;
 }
 
-.container {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-	width: 30%;
-    height: 10%;
-}
-
 span.psw {
 	float: right;
 	padding-top: 16px;
@@ -81,9 +95,9 @@ div {
 </style>
 </head>
 
-<body>
+<body background="/resources/images/background_1.jpg">
 	
-	<div class="container" align="center">
+	<div class="container">
 	<h1>Agregar una Keyword</h1>
 		<div class="form">
 		

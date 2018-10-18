@@ -75,10 +75,11 @@ body {
 table {
     font-family: 'Roboto Condensed', sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
 }
 
 th{
+	width: 50%;
 	text-align: center;
 	padding: 8px;
 	border: 1px solid #dddddd;
@@ -117,10 +118,10 @@ tr:nth-child(even) {
 
 <h2>KEYWORDS</h2>
 <br/>
-<button onclick="location.href='/addkeywords'" class="button createUser">Agregar nueva Keyword</button>
+<button onclick="location.href='/addkeywords'" class="button createUser">+ Agregar nueva Keyword</button>
 
 <br/><br/>
-<table>
+<table align ="center">
 
   <tr>
     <th>Keyword</th>
