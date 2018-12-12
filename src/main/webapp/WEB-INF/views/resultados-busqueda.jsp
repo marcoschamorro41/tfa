@@ -123,7 +123,16 @@ tr:nth-child(even) {
 			<td>Solitary One</td>
 			<td>#WhiteHouse #Impeach45 #CBSNews #ImpeachTrump #realdonaldtrump #Democrat #Trump2020 #BlueWave #Resist\u2026 https://t.co/gnYlRTqWKy</td>
 			<td>#WhiteHouse, #Impeach45, #CBSNews, #ImpeachTrump, #realdonaldtrump, #Democrat, #Trump2020, #BlueWave, #Resis</td>
-			<td>15/12/2017</td>
+			<td>20/10/2018</td>
+			<td>English</td>
+			<td>Canada</td>
+		</tr>
+		
+		<tr>
+			<td>Solitary One</td>
+			<td>#WhiteHouse #Impeach45 #CBSNews #ImpeachTrump #realdonaldtrump #Democrat #Trump2020 #BlueWave #Resist\u2026 https://t.co/gnYlRTqWKy</td>
+			<td>#WhiteHouse, #Impeach45, #CBSNews, #ImpeachTrump, #realdonaldtrump, #Democrat, #Trump2020, #BlueWave, #Resis</td>
+			<td>20/10/2018</td>
 			<td>English</td>
 			<td>Canada</td>
 		</tr>
@@ -132,7 +141,7 @@ tr:nth-child(even) {
 			<td>Arwen</td>
 			<td>RT @eavesdropann: THIS IS THE MOST #ORCHESTRATED  HIT JOB \n\nBY THE #DEMOCRATIC PARTY TO #DESTROY #TRUMP\n\nUNFORTUNATELY #KAVANAUGH IS THE #P\u2026</td>
 			<td>#ORCHESTRATED, #DEMOCRATIC, #DESTROY, #TRUMP, #KAVANAUG</td>
-			<td>10/10/2018</td>
+			<td>20/10/2018</td>
 			<td>Spanish</td>
 			<td>Argentina</td>
 		</tr>
@@ -141,7 +150,7 @@ tr:nth-child(even) {
 			<td>mostafa</td>
 			<td>Iranian Resistance Calls #Trump\u2019s #Iran Policy The Right Approach\nThe Iranian resistance (#NCRI) also needs interna\u2026 https://t.co/Hspc4Fm8Wb</td>
 			<td>#Trump, #Iran, #NCR</td>
-			<td>5/8/20187</td>
+			<td>20/10/2018</td>
 			<td>English</td>
 			<td>London, England</td>
 		</tr>
@@ -150,7 +159,7 @@ tr:nth-child(even) {
 			<td>Solitary One</td>
 			<td>#WhiteHouse #Impeach45 #CBSNews #ImpeachTrump #realdonaldtrump #Democrat #Trump2020 #BlueWave #Resist\u2026 https://t.co/gnYlRTqWKy</td>
 			<td>#WhiteHouse, #Impeach45, #CBSNews, #ImpeachTrump, #realdonaldtrump, #Democrat, #Trump2020, #BlueWave, #Resis</td>
-			<td>15/12/2017</td>
+			<td>20/10/2018</td>
 			<td>English</td>
 			<td>Canada</td>
 		</tr>
@@ -159,7 +168,7 @@ tr:nth-child(even) {
 			<td>Arwen</td>
 			<td>RT @eavesdropann: THIS IS THE MOST #ORCHESTRATED  HIT JOB \n\nBY THE #DEMOCRATIC PARTY TO #DESTROY #TRUMP\n\nUNFORTUNATELY #KAVANAUGH IS THE #P\u2026</td>
 			<td>#ORCHESTRATED, #DEMOCRATIC, #DESTROY, #TRUMP, #KAVANAUG</td>
-			<td>10/10/2018</td>
+			<td>20/10/2018</td>
 			<td>Spanish</td>
 			<td>Argentina</td>
 		</tr>
@@ -168,7 +177,7 @@ tr:nth-child(even) {
 			<td>mostafa</td>
 			<td>Iranian Resistance Calls #Trump\u2019s #Iran Policy The Right Approach\nThe Iranian resistance (#NCRI) also needs interna\u2026 https://t.co/Hspc4Fm8Wb</td>
 			<td>#Trump, #Iran, #NCR</td>
-			<td>5/8/20187</td>
+			<td>20/10/2018</td>
 			<td>English</td>
 			<td>London, England</td>
 		</tr>
@@ -178,9 +187,12 @@ tr:nth-child(even) {
 		
 </table><br/><br/>
 <div class="container-crear">
-		
+
+			<p>
+			<button onclick="location.href='/busqueda'">VOLVER ATRÄS</button>
+			</p>
 			<button onclick="location.href='/admin'">REGRESAR AL MENÚ</button>
-		
+			<br>		
 		
 		</div>
 </div>

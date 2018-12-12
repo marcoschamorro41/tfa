@@ -116,7 +116,15 @@ div {
             <button type="submit">CARGAR KEYWORDS</button>
 
 			</form>
-		</div>
+	
+
+
+<button onclick="keyword.href='/admin'" class="volver"> VOLVER ATRAS </button>
+<br>
+	
+<button onclick="location.href='/admin'" class="volver"> REGRESAR AL MENÚ </button>
+			<br>
+</div>
 	</div>
 
 </body>

@@ -4,9 +4,9 @@ import com.mysql.cj.jdbc.MysqlDataSource;
 
 public class DataBaseManager {
 
-	private static final String USER = "mmascheroni";
-	private static final String PASSWORD = "Marie2704!";
-	private static final String SERVER_NAME = "23.229.219.200";
+	private static final String USER = "root";
+	private static final String PASSWORD = "";
+	private static final String SERVER_NAME = "localhost";
 	private static final int SERVER_PORT = 3306;
 	private static final String DB_NAME = "mamascheroni";
 	

@@ -107,13 +107,17 @@ span.psw {
 			<p></p>
 		</div>
 		<div class="container-crear">
+			<p>
 			<button type="submit">CREAR USUARIO</button>
-
-		</div>
-
-		<div class="container-crear">
+			</p>
+			<p>
 			<button type="button" class="cancelbtn">CANCELAR</button>
+			</p>
+			<button onclick="location.href='/admin'"> REGRESAR AL MENÚ </button>
+			<br>
 		</div>
+		
+		
 	</form>
 	</div>
 

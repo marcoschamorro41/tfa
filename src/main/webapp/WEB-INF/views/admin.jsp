@@ -57,7 +57,7 @@ button:hover {
 </head>
 	<body background="/resources/images/background_1.jpg">
 		<div class="card">
-		<h2>BIENVENIDO</h2>
+		<h2>B I E N V E N I D O</h2>
 		<div align="center">
 		<p class="title">${name}</p>
 		<p>Empresa ${corporate}</p>
