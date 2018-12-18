@@ -57,7 +57,7 @@ button:hover {
 </head>
 	<body background="/resources/images/background_1.jpg">
 		<div class="card">
-		<h2>B I E N V E N I D O I N V I T A D O</h2>
+		<h2>B I E N V E N I D O</h2>
 		<div align="center">
 		<p class="title">${name}</p>
 		<p>Empresa ${corporate}</p>
@@ -65,12 +65,11 @@ button:hover {
 		</div>
 		
 		<div align="center">
-		
 		<p>
-			<button onclick="location.href='reportes'">REPORTES</button>
+			<button onclick="location.href='busqueda'">BÚSQUEDA</button>
 		</p>
 		
-		
+	
 		</div>
 		</div>
 

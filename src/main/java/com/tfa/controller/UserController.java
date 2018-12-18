@@ -60,7 +60,7 @@ public class UserController {
     			|| !corporate.equalsIgnoreCase("Invitado"))
     		model.put("errorMessage", "El rol no es correcto. Solo puede ser: Admin, Operador o Invitado");
     	
-    	boolean creado = UserService.crearUsuario(corporate, username, password, usertype);
+    	boolean creado = UserService.crearUsuario(System.getProperty("idcompany"), username, password, usertype);
     	
         if (!creado) {
         	model.put("errorMessage", "Error al crear usuario. Compruebe los datos");

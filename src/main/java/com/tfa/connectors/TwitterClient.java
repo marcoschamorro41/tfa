@@ -58,14 +58,14 @@ public class TwitterClient {
     }
 
     private static String printTweet(Status statusTweet, String empresa, long limite) throws IOException {
-    	System.out.println("Imprimiendo Pichos");
-    	System.out.println("Imprimiendo Pichos");
-    	System.out.println("Imprimiendo Pichos");
-    	System.out.println("Imprimiendo Pichos");
-    	System.out.println("Imprimiendo Pichos");
+    	System.out.println("Imprimiendo......");
+    	System.out.println("Imprimiendo......");
+    	System.out.println("Imprimiendo......");
+    	System.out.println("Imprimiendo......");
+    	System.out.println("Imprimiendo......");
     	ObjectMapper mapper = new ObjectMapper();
-    	String picho = mapper.writeValueAsString(statusTweet);
-    	System.out.println(picho);
+    	String status = mapper.writeValueAsString(statusTweet);
+    	System.out.println(status);
     	
     	MongoConnector mongoConn = new MongoConnector();
         long cant = mongoConn.cantidadDeDocumentos(empresa);

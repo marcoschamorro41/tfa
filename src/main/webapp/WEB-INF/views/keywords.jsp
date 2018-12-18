@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -126,11 +129,10 @@ tr:nth-child(even) {
   <tr>
     <th>Keyword</th>
     <th>Accion</th>
+    
   </tr>
-  
-
 		<tr>
-			<td>Coca Cola</td>
+			<td>${keywords.get(0).getKeyWord()}</td>
 			<th>
 			
 				<form action="/editkeyword" method="get">
@@ -146,9 +148,9 @@ tr:nth-child(even) {
 			
 			</th>
 		</tr>
-		
+		</tr>
 		<tr>
-			<td>Coke</td>
+			<td>${keywords.get(1).getKeyWord()}</td>
 			<th>
 			
 				<form action="/editkeyword" method="get">
@@ -164,7 +166,44 @@ tr:nth-child(even) {
 			
 			</th>
 		</tr>
+		</tr>
+		<tr>
+			<td>${keywords.get(2).getKeyWord()}</td>
+			<th>
+			
+				<form action="/editkeyword" method="get">
+                	<input type="hidden" name="keyword" value="keyword-1" />
+                	<button class="btn edit">Editar Keyword</button>
+            	</form>
 
+				<form action="/deletekeyword" method="get">
+                	<input type="hidden" name="keyword" value="keyword-1" />
+                	<button class="btn delete">Borrar Keyword</button>
+            	</form>
+			
+			
+			</th>
+		</tr>
+		</tr>
+		<tr>
+			<td>${keywords.get(3).getKeyWord()}</td>
+			<th>
+			
+				<form action="/editkeyword" method="get">
+                	<input type="hidden" name="keyword" value="keyword-1" />
+                	<button class="btn edit">Editar Keyword</button>
+            	</form>
+
+				<form action="/deletekeyword" method="get">
+                	<input type="hidden" name="keyword" value="keyword-1" />
+                	<button class="btn delete">Borrar Keyword</button>
+            	</form>
+			
+			
+			</th>
+		</tr>
+		</tr>		 	
+	
 
 </table>
 <br/><br/>

@@ -1,5 +1,7 @@
 package com.tfa.controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tfa.connectors.TwitterClient;
+import com.tfa.entities.KeyWord;
 import com.tfa.service.KeywordsService;
 
 @Controller
@@ -20,6 +23,8 @@ public class KeywordsController {
 
     @RequestMapping(value="/keywords", method = RequestMethod.GET)
     public String showKeywordsPage(ModelMap model){
+    	ArrayList<KeyWord> result = KeywordsService.obtnerKeyWords("test");
+    	model.addAttribute("keywords", result);
         return "keywords";
     }
 

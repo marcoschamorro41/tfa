@@ -78,8 +78,8 @@
 
             var data = google.visualization.arrayToDataTable([
               ['Campo', 'Cantidad',],
-              ['Retweets', 25],
-              ['Likes', 12]
+              ['Retweets', ${cantretweets}],
+              ['Likes', ${cantrelikes}]
             ]);
 
             var options = {
@@ -111,10 +111,9 @@
           function drawRegionsMap() {
             var data = google.visualization.arrayToDataTable([
               ['Pais', 'Cantidad de Tweets'],
-              ['Argentina', 200],
-              ['Brazil', 400],
-              ['Russia', 250],
-              ['United States', 600]
+              ['Argentina', ${cantArg}],
+              ['Brazil', ${cantBra}],
+              ['United States', ${cantUsa}]
             ]);
 
             var options = {};
@@ -143,14 +142,7 @@
               ['@carocarp',  2, 23, 27],
               ['@melisapanyagua',  2, 86, 102],
               ['@carlosva',  2, 57, 91],
-              ['@pinoso12',  1, 43, 49],
-              ['@cfrhector',  1, 61, 103],
-              ['@montaneses',  1, 22, 41],
-              ['@marilaigu',  1, 76, 78],
-              ['@emanuelpoletti',  1, 156, 163],
-              ['@maxcope',  1, 94, 98],
-              ['@sebastebulli',  1, 14, 12],
-              ['@debora777',  1, 26, 27]
+              ['@pinoso12',  1, 43, 49]
             ]);
 
             var table = new google.visualization.Table(document.getElementById('table_div'));
@@ -225,10 +217,7 @@ th, td {
       	<div><p><strong>Tweets por País</strong></p></div>
       	<div id="regions_div" style="border: 1px solid #ccc"></div>
       	</td>
-      	<td>
-      	<div><p><strong>Usuarios con más menciones</strong></p></div>
-      	<div id="table_div" style="border: 1px solid #ccc"></div>
-      	</td>
+      	
       	
       </tr>
     </table>

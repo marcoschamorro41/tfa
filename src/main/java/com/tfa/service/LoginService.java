@@ -50,19 +50,22 @@ public class LoginService {
 		try {
 			
 			MysqlDataSource dataSource = DataBaseManager.getMysqlDataSource();
-			String query = "SELECT * FROM usuarios WHERE username = ?";
+			String query = "SELECT * FROM usuarios INNER JOIN company ON usuarios.company = company.idCompany WHERE username= ?";
 			Connection conn = dataSource.getConnection();
 			PreparedStatement statement = conn.prepareStatement(query);
 			statement.setString(1, userid);
 			ResultSet rs = statement.executeQuery();
 			
 			while (rs.next()) {
-				String corp = rs.getString("company");
+				String corp = rs.getString("companyName");
 				String pass = rs.getString("password");
 				bandera = password.equalsIgnoreCase(pass) &&
 						company.equalsIgnoreCase(corp);
+
+		        System.setProperty("company", rs.getString("companyName"));
+		        System.setProperty("idcompany", rs.getString("idcompany"));
 			}
-			
+
 			rs.close();
 			statement.close();
 			conn.close();
@@ -101,5 +104,31 @@ public class LoginService {
     	return bandera;
         
     }
+    public boolean isOperador(String userid) {
+    	boolean bandera = false;
+    	
+    	try {
+            MysqlDataSource dataSource = DataBaseManager.getMysqlDataSource();
+            String query = "SELECT * FROM usuarios WHERE username = ?";
+            
+            Connection conn = dataSource.getConnection();
+            PreparedStatement statement = conn.prepareStatement(query);
+            statement.setString(1, userid);
+            ResultSet rs = statement.executeQuery();
 
+            while(rs.next()){
+            	String roluser = rs.getString("rol");
+				bandera = roluser.equalsIgnoreCase("Operador");
+            }
+        
+            rs.close();
+            statement.close();
+            conn.close();
+            
+        	} catch (SQLException e) {
+        		e.printStackTrace();
+        	}
+    	return bandera;
+        
+    }
 }

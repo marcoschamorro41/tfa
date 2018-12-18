@@ -30,7 +30,8 @@ public class LoginController {
     @RequestMapping(value="/login", method = RequestMethod.POST)
     public String showWelcomePage(HttpSession session, ModelMap model, @RequestParam String corporate, @RequestParam String name, @RequestParam String password) {
     	boolean isValidUser = service.validateUser(corporate, name, password);
-        boolean isAdmin = service.isAdmin(name);        
+        boolean isAdmin = service.isAdmin(name); 
+        boolean isOperador = service.isOperador(name);  
 
         if (!isValidUser) {
             model.put("errorMessage", "Fallo al loguearse. Compruebe los datos");
@@ -40,7 +41,6 @@ public class LoginController {
         model.put("name", name);
         model.put("password", password);
         model.put("corporate", corporate);
-
         session.setAttribute("corporate", corporate);
         /**
         MongoConnector c = new MongoConnector();
@@ -88,6 +88,8 @@ public class LoginController {
         
         if (isAdmin)
             return "admin";
+        if(isOperador)
+        	return "operador";
         return "welcome";
     }
 }

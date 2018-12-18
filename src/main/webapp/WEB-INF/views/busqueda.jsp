@@ -128,7 +128,7 @@ span.psw {
 
 	<h2>REALIZAR UNA BÚSQUEDA</h2>	
 
-	<form method="post" action="/editionofuser">
+	<form method="post" action="/resultados-busqueda">
 		<input type="hidden" name="oldUsername" value="${empresa}" />
 			<br>
 			<p>
@@ -136,12 +136,12 @@ span.psw {
 					<option value="yes">Contiene</option>
 					<option value="not">No contiene</option>
 				</select>
-				<input type="text" placeholder="Ingresar palabra o frase a buscar" name="title">
+				<input type="text" placeholder="Ingresar palabra o frase a buscar" name="primerabus">
 			</p>
 			<br/>
 			<p>
 				<label for="operator"><b>SELECCIONE UN OPERADOR BOOLEANO: </b></label>
-				<select name="operator" class= "Contiene">
+				<select name="operator" class= "Contiene" name="operator">
 					<option value="yes">Y (AND)</option>
 					<option value="not">O (OR)</option>
 				</select>
@@ -152,18 +152,15 @@ span.psw {
 					<option value="yes">Contiene</option>
 					<option value="not">No contiene</option>
 				</select>
-				<input type="text" placeholder="Ingresar palabra o frase a buscar" name="body">
+				<input type="text" placeholder="Ingresar palabra o frase a buscar" name="segundabus">
 			</p>
 			
 			<br>
 
-			<button type="submit">BUSCAR - NO TOCAR</button>
+			<button type="submit">Buscar</button>
 
 	</form>
 
-			<p>
-			<button onclick="location.href='/resultados-busqueda'">Buscar</button>
-			</p>
 			<button onclick="location.href='/admin'"> REGRESAR AL MENÚ </button>
 			<br>
 	</div>

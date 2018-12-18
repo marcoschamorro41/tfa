@@ -58,7 +58,7 @@ public class UserService {
 			statement.setString(1, user);
 			statement.setString(2, password);
 			statement.setString(3, typeUser);
-			statement.setString(4, corporate);
+			statement.setLong(4, Long.parseLong(corporate));
 
 			int inserted = 0;
 			try {

@@ -120,68 +120,66 @@ tr:nth-child(even) {
   </tr>
 		
 		<tr>
-			<td>Solitary One</td>
-			<td>#WhiteHouse #Impeach45 #CBSNews #ImpeachTrump #realdonaldtrump #Democrat #Trump2020 #BlueWave #Resist\u2026 https://t.co/gnYlRTqWKy</td>
-			<td>#WhiteHouse, #Impeach45, #CBSNews, #ImpeachTrump, #realdonaldtrump, #Democrat, #Trump2020, #BlueWave, #Resis</td>
-			<td>20/10/2018</td>
-			<td>English</td>
-			<td>Canada</td>
+			<td>${tweets.get(0).getUsuario() }</td>
+			<td>${tweets.get(0).getCuerpoTweet()}</td>
+			<td>${tweets.get(0).getListaHashtags()}</td>
+			<td>${tweets.get(0).getFecha()}</td>
+			<td>${tweets.get(0).getIdioma()}</td>
+			<td>${tweets.get(0).getUbicacion()}</td>
 		</tr>
 		
 		<tr>
-			<td>Solitary One</td>
-			<td>#WhiteHouse #Impeach45 #CBSNews #ImpeachTrump #realdonaldtrump #Democrat #Trump2020 #BlueWave #Resist\u2026 https://t.co/gnYlRTqWKy</td>
-			<td>#WhiteHouse, #Impeach45, #CBSNews, #ImpeachTrump, #realdonaldtrump, #Democrat, #Trump2020, #BlueWave, #Resis</td>
-			<td>20/10/2018</td>
-			<td>English</td>
-			<td>Canada</td>
+			<td>${tweets.get(1).getUsuario() }</td>
+			<td>${tweets.get(1).getCuerpoTweet()}</td>
+			<td>${tweets.get(1).getListaHashtags()}</td>
+			<td>${tweets.get(1).getFecha()}</td>
+			<td>${tweets.get(1).getIdioma()}</td>
+			<td>${tweets.get(1).getUbicacion()}</td>
 		</tr>
 		
 		<tr>
-			<td>Arwen</td>
-			<td>RT @eavesdropann: THIS IS THE MOST #ORCHESTRATED  HIT JOB \n\nBY THE #DEMOCRATIC PARTY TO #DESTROY #TRUMP\n\nUNFORTUNATELY #KAVANAUGH IS THE #P\u2026</td>
-			<td>#ORCHESTRATED, #DEMOCRATIC, #DESTROY, #TRUMP, #KAVANAUG</td>
-			<td>20/10/2018</td>
-			<td>Spanish</td>
-			<td>Argentina</td>
+			<td>${tweets.get(3).getUsuario() }</td>
+			<td>${tweets.get(3).getCuerpoTweet()}</td>
+			<td>${tweets.get(3).getListaHashtags()}</td>
+			<td>${tweets.get(3).getFecha()}</td>
+			<td>${tweets.get(3).getIdioma()}</td>
+			<td>${tweets.get(3).getUbicacion()}</td>
 		</tr>
 		
 		<tr>
-			<td>mostafa</td>
-			<td>Iranian Resistance Calls #Trump\u2019s #Iran Policy The Right Approach\nThe Iranian resistance (#NCRI) also needs interna\u2026 https://t.co/Hspc4Fm8Wb</td>
-			<td>#Trump, #Iran, #NCR</td>
-			<td>20/10/2018</td>
-			<td>English</td>
-			<td>London, England</td>
+			<td>${tweets.get(2).getUsuario() }</td>
+			<td>${tweets.get(2).getCuerpoTweet()}</td>
+			<td>${tweets.get(2).getListaHashtags()}</td>
+			<td>${tweets.get(2).getFecha()}</td>
+			<td>${tweets.get(2).getIdioma()}</td>
+			<td>${tweets.get(2).getUbicacion()}</td>
 		</tr>
 		
 		<tr>
-			<td>Solitary One</td>
-			<td>#WhiteHouse #Impeach45 #CBSNews #ImpeachTrump #realdonaldtrump #Democrat #Trump2020 #BlueWave #Resist\u2026 https://t.co/gnYlRTqWKy</td>
-			<td>#WhiteHouse, #Impeach45, #CBSNews, #ImpeachTrump, #realdonaldtrump, #Democrat, #Trump2020, #BlueWave, #Resis</td>
-			<td>20/10/2018</td>
-			<td>English</td>
-			<td>Canada</td>
+			<td>${tweets.get(4).getUsuario() }</td>
+			<td>${tweets.get(4).getCuerpoTweet()}</td>
+			<td>${tweets.get(4).getListaHashtags()}</td>
+			<td>${tweets.get(4).getFecha()}</td>
+			<td>${tweets.get(4).getIdioma()}</td>
+			<td>${tweets.get(4).getUbicacion()}</td>
 		</tr>
 		
 		<tr>
-			<td>Arwen</td>
-			<td>RT @eavesdropann: THIS IS THE MOST #ORCHESTRATED  HIT JOB \n\nBY THE #DEMOCRATIC PARTY TO #DESTROY #TRUMP\n\nUNFORTUNATELY #KAVANAUGH IS THE #P\u2026</td>
-			<td>#ORCHESTRATED, #DEMOCRATIC, #DESTROY, #TRUMP, #KAVANAUG</td>
-			<td>20/10/2018</td>
-			<td>Spanish</td>
-			<td>Argentina</td>
+			<td>${tweets.get(5).getUsuario() }</td>
+			<td>${tweets.get(5).getCuerpoTweet()}</td>
+			<td>${tweets.get(5).getListaHashtags()}</td>
+			<td>${tweets.get(5).getFecha()}</td>
+			<td>${tweets.get(5).getIdioma()}</td>
+			<td>${tweets.get(5).getUbicacion()}</td>
 		</tr>
-		
 		<tr>
-			<td>mostafa</td>
-			<td>Iranian Resistance Calls #Trump\u2019s #Iran Policy The Right Approach\nThe Iranian resistance (#NCRI) also needs interna\u2026 https://t.co/Hspc4Fm8Wb</td>
-			<td>#Trump, #Iran, #NCR</td>
-			<td>20/10/2018</td>
-			<td>English</td>
-			<td>London, England</td>
-		</tr>
-		
+			<td>${tweets.get(6).getUsuario() }</td>
+			<td>${tweets.get(6).getCuerpoTweet()}</td>
+			<td>${tweets.get(6).getListaHashtags()}</td>
+			<td>${tweets.get(6).getFecha()}</td>
+			<td>${tweets.get(6).getIdioma()}</td>
+			<td>${tweets.get(6).getUbicacion()}</td>
+		</tr>		
 
 		
 		

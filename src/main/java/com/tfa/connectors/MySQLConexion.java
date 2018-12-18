@@ -21,9 +21,9 @@ public class MySQLConexion {
 
 
         MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setUser("mmascheroni");
-        dataSource.setPassword("Marie2704!");
-        dataSource.setServerName("23.229.219.200");
+        dataSource.setUser("root");
+        dataSource.setPassword("");
+        dataSource.setServerName("localhost");
         dataSource.setPort(3306);
         dataSource.setDatabaseName("mamascheroni");
 

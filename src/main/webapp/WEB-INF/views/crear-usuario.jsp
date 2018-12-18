@@ -99,7 +99,7 @@ span.psw {
 					type="password" placeholder="Ingresar contraseña" name="password"
 					required>
 			<p>
-				<label for="corporate"><b>Empresa</b></label> <input type="text"
+				<input type="hidden" type="text"
 					placeholder="Ingresar empresa" name="corporate" required>
 			<p>
 				<label for="usertype"><b>Tipo de Usuario</b></label> <input
